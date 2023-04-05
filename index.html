@@ -1,11 +1,71 @@
-<h1>introduction to frontend </h1>	
-<p>lorem ipsum</p>
-<p>new paragraf</p>
-<ul>
-<li>html</li>
-<li>css</li>
-<li>js</li>
-<li>2</li>
-<li>1</li>
-<li>3</li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced CSS - Assignment 1</title>
+    <style>
+a[href^="https://www.google.com/"]{
+    color: green;
+}
+a[href^="https://www.link-group.eu/"]{
+    color: red;
+}
+#second-div p:nth-last-of-type(odd) {
+  background: red;
+}
+
+#second-div p:nth-last-of-type(even){
+  background: blue;
+}
+
+#first-div p::after{
+    content: "NEW";
+    color: yellow;
+}
+
+#second-div p::after{
+    content: "";
+}
+p:nth-child(7n+1){
+    width: 100px;
+    height: auto;
+    margin: 30px 30px auto 0 ;
+    color: green;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    font: 10px;
+}
+
+body p:nth-child(7n+1):hover{
+    font-style: italic;
+    color: blue;
+    background-color: aquamarine;
+}
+    </style>
+</head>
+
+<body>
+    <h1>Main Heading</h1>
+    <p>Paragraph 1</p>
+    <a href="https://www.google.com/">Google</a>
+    <a href="https://www.google.com/doodles">Google Doodles</a>
+    <a href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
+    <div id="first-div">
+        <h2>Subheading</h2>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <div id="second-div">
+            <h3>Sub subheading</h3>
+            <p>Paragraph 4</p>
+            <p>Paragraph 5</p>
+            <p>Paragraph 6</p>
+            <p>Paragraph 7</p>
+            <p>Paragraph 8</p>
+        </div>
+    </div>
+    <p>Paragraph 9</p>
+    <p>Paragraph 10</p>
+</body>
+
+</html>
