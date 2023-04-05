@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacija</title>
+    <style>
+    .box {
+        
+        margin-top: 10%;
+        margin-left: 32%;
+        width: 700px;
+        height: 500px;
+        background: linear-gradient(#050210, #050210);
+        position: relative;
+    }
+    
+    .c1 {
+        position: absolute;
+        top: 21%;
+        left: 29%;
+        transform: translate(-21%,-29%);
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        padding: 3%;
+        background: linear-gradient(#fb5dad, #55fb9f, #b97aff);     
+        animation: animacija 0.5s linear infinite;
+    }
+
+    .c1:after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        bottom: 20px;
+        left: 20px;
+        border-radius: 50%;
+        background-color: black;
+    }
+    .c1 span {
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+        border-radius: 50%;
+    }
+
+    @keyframes animacija {
+            0% {
+                transform:rotate(0deg);
+            }
+            100% {
+                transform:rotate(320deg); 
+            }
+        }
+
+    .c1 span:nth-child(1) {
+        filter: blur(5px);
+    }
+
+    .c1 span:nth-child(2) {
+        filter: blur(10px);
+    }
+
+    .c1 span:nth-child(3) {
+        filter: blur(20px);
+    }
+
+    .c1 span:nth-child(4) {
+        filter: blur(50px);
+    }
+    
+    .c2 {
+        position: absolute;
+        top: 25%;
+        left: 32%;
+        transform: translate(-21%,-29%);
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background:  rgba(82, 88, 119, 0.39);
+        animation: animacija1 1s linear infinite;
+    }
+
+    @keyframes animacija1 {
+        0% {
+            transform: scale(0.1);
+            box-shadow: 0 0 0 0 rgb(29, 27, 30);
+        }
+        80% {
+            transform: scale(0.8);
+            box-shadow: 0 0 0 50% rgb(29, 27, 1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+</style>
+</head>
+<body>
+    <div class="box">
+        <div class="c1"> 
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="c2"></div>
+    </div>
+</body>
+</html>
